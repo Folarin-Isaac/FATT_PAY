@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/purchaseOneFragment">
+
+    <fragment
+        android:id="@+id/purchaseOneFragment"
+        android:name="com.example.fattpay.PurchaseOneFragment"
+        android:label="PurchaseOneFragment"
+        tools:layout="@layout/fragment_purchase_one">
+        <action
+            android:id="@+id/action_purchaseOneFragment_to_purchaseTwoFragment"
+            app:destination="@id/purchaseTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseTwoFragment"
+        android:name="com.example.fattpay.PurchaseTwoFragment"
+        android:label="PurchaseTwoFragment"
+        tools:layout="@layout/fragment_purchase_two">
+        <action
+            android:id="@+id/action_purchaseTwoFragment_to_purchaseSuccessfulFragment"
+            app:destination="@id/purchaseSuccessfulFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseSuccessfulFragment"
+        android:name="com.example.fattpay.PurchaseSuccessfulFragment"
+        android:label="PurchaseSuccessfulFragment"
+        tools:layout="@layout/fragment_purchase_successful">
+        <action
+            android:id="@+id/action_purchaseSuccessfulFragment_to_purchaseCustomerCopy"
+            app:destination="@id/purchaseCustomerCopy" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseCustomerCopy"
+        android:name="com.example.fattpay.PurchaseCustomerCopy"
+        android:label="PurchaseCustomerCopy"
+        tools:layout="@layout/fragment_purchase_customer_copy">
+        <action
+            android:id="@+id/action_purchaseCustomerCopy_to_purchaseMerchantCopy"
+            app:destination="@id/purchaseMerchantCopy" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseMerchantCopy"
+        android:name="com.example.fattpay.PurchaseMerchantCopy"
+        android:label="fragment_purchase_merchant_copy"
+        tools:layout="@layout/fragment_purchase_merchant_copy" />
+    <fragment
+        android:id="@+id/fragmentCash"
+        android:name="com.example.fattpay.FragmentCash"
+        android:label="fragment_cash"
+        tools:layout="@layout/fragment_cash" >
+        <action
+            android:id="@+id/action_fragmentCash_to_purchaseFragment"
+            app:destination="@id/purchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchaseFragment"
+        android:name="com.example.fattpay.PurchaseFragment"
+        android:label="PurchaseFragment"
+        tools:layout="@layout/fragment_purchase">
+        <action
+            android:id="@+id/action_purchaseFragment_to_fragmentPaymentSuccessful"
+            app:destination="@id/fragmentPaymentSuccessful" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentPaymentSuccessful"
+        android:name="com.example.fattpay.FragmentPaymentSuccessful"
+        android:label="fragment_payment_successful"
+        tools:layout="@layout/fragment_payment_successful" >
+        <action
+            android:id="@+id/action_fragmentPaymentSuccessful_to_fragmentCustomerTransactions"
+            app:destination="@id/fragmentCustomerTransactions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCustomerTransactions"
+        android:name="com.example.fattpay.FragmentCustomerTransactions"
+        android:label="fragment_customer_transactions"
+        tools:layout="@layout/fragment_customer_transactions" >
+        <action
+            android:id="@+id/action_fragmentCustomerTransactions_to_fragmentMerchantTransactions"
+            app:destination="@id/fragmentMerchantTransactions" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMerchantTransactions"
+        android:name="com.example.fattpay.FragmentMerchantTransactions"
+        android:label="FragmentMerchantTransactions"
+        tools:layout="@layout/fragment_merchant_transactions"/>
+    <fragment
+        android:id="@+id/preAuthFragment"
+        android:name="com.example.fattpay.PreAuthFragment"
+        android:label="fragment_pre_auth"
+        tools:layout="@layout/fragment_pre_auth" >
+        <action
+            android:id="@+id/action_preAuthFragment_to_pinFragment"
+            app:destination="@id/pinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.example.fattpay.PinFragment"
+        android:label="PinFragment"
+        tools:layout="@layout/fragment_pin"/>
+    <fragment
+        android:id="@+id/fragmentPaymentMethods"
+        android:name="com.example.fattpay.FragmentPaymentMethods"
+        android:label="FragmentPaymentMethods"
+        tools:layout="@layout/fragment_payment_methods"/>
+    <fragment
+        android:id="@+id/fragmentCategory"
+        android:name="com.example.fattpay.FragmentCategory"
+        android:label="fragment_report"
+        tools:layout="@layout/fragment_report" >
+        <action
+            android:id="@+id/action_fragmentCategory_to_endOfDayFragment"
+            app:destination="@id/endOfDayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/endOfDayFragment"
+        android:name="com.example.fattpay.EndOfDayFragment"
+        android:label="fragment_end_of_day"
+        tools:layout="@layout/fragment_end_of_day" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.fattpay.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <fragment
+        android:id="@+id/fragmentSettings"
+        android:name="com.example.fattpay.FragmentSettings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
