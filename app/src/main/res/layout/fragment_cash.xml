@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".FragmentCash">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_bold"
+            android:text="CURRENT SALE: "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_bold"
+            android:text="# 3,000.00 "/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/inter"
+        android:text="@string/description"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/description_bg"
+        android:layout_marginStart="25dp"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:layout_marginEnd="25dp"
+        android:elevation="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/inter"
+        android:text="@string/amount"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/description_bg"
+        android:layout_marginStart="25dp"
+        android:padding="8dp"
+        android:textColorHint="@color/black"
+        android:fontFamily="@font/inter_bold"
+        android:hint="# 3,000.00"
+        android:textColor="@color/black"
+        android:layout_marginEnd="25dp"
+        android:elevation="0dp"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/proceed_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="25dp"
+        android:height="50dp"
+        android:backgroundTint="#35C31A"
+        android:text="@string/proceed"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp" />
+
+
+
+
+</LinearLayout>

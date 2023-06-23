@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:paddingHorizontal="25dp"
+    android:layout_marginHorizontal="35dp"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verify pin to regenerate receipt"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:textColor="#3E3E3E"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:background="@drawable/edittext_bg"/>
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_bg"/>
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_bg"/>
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:padding="8dp"
+            android:background="@drawable/edittext_bg"/>
+
+
+
+    </LinearLayout>
+
+    <!-- Row 1 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="87.8dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <!-- Number 1 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/one"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="87.8dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textStyle="bold"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 2 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/two"
+            android:layout_width="87.8dp"
+            android:layout_height="87.8dp"
+            android:background="@drawable/circular_bg"
+            android:text="2"
+            app:cornerRadius="28dp"
+            app:layout_constraintEnd_toStartOf="@+id/three"
+            app:layout_constraintStart_toEndOf="@+id/one"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="2"
+                android:textStyle="bold"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 3 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="70dp"
+            android:id="@+id/three"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="87.8dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textStyle="bold"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Row 2 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="87.8dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <!-- Number 4 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/four"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="87.8dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 5 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/five"
+            android:layout_width="87.8dp"
+            android:layout_height="87.8dp"
+            android:background="@drawable/circular_bg"
+            app:cornerRadius="28dp"
+            app:layout_constraintEnd_toStartOf="@+id/six"
+            app:layout_constraintStart_toEndOf="@+id/four"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="5"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 6 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="70dp"
+            android:id="@+id/six"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="87.8dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Row 3 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="86.23dp"
+        android:orientation="horizontal">
+
+        <!-- Number 7 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/seven"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="86.23dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 8 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/eight"
+            android:layout_width="87.8dp"
+            android:layout_height="86.23dp"
+            android:background="@drawable/circular_bg"
+            app:cornerRadius="28dp"
+            app:layout_constraintEnd_toStartOf="@+id/nine"
+            app:layout_constraintStart_toEndOf="@+id/seven"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="8"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 9 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="70dp"
+            android:id="@+id/nine"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="86.23dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- Row 4 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="87.8dp"
+        android:layout_marginTop="10dp">
+
+        <!-- Number x -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/plus"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="86.23dp"
+            android:background="@drawable/circular_bg">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:gravity="center"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number 0 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/zero"
+            android:layout_width="87.8dp"
+            android:layout_height="86.23dp"
+            android:background="@drawable/circular_bg"
+            app:cornerRadius="28dp"
+            app:layout_constraintEnd_toStartOf="@+id/backspace"
+            app:layout_constraintStart_toEndOf="@+id/plus"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="29sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Number <<-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/backspace"
+            app:cornerRadius="28dp"
+            android:layout_width="87.8dp"
+            android:layout_height="86.23dp"
+            android:background="@drawable/circular_bg">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@drawable/delete_back" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/proceed_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:height="50dp"
+        android:backgroundTint="#35C31A"
+        android:text="@string/verify_pin"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp" />
+
+
+</LinearLayout>

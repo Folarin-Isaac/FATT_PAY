@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EndOfDayFragment">
+
+    <TextView
+        android:id="@+id/text_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:text="You can only print/reprint your daily transaction end of day report for the last seven days from this device."
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#3E3E3E"
+        android:fontFamily="@font/inter"/>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_one"
+        android:layout_marginStart="25dp"
+        android:hint="Please search with RRR"
+        android:textColorHint="@color/black"
+        android:textSize="14sp"
+        android:drawableEnd="@drawable/ic_search"
+        android:padding="10dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/search_bg"
+        android:layout_marginTop="30dp"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_margin="20dp"
+        android:background="@drawable/custom_background">
+
+        <TextView
+            android:id="@+id/today_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Today's Transactions:"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/transaction_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/approved_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/today_txt"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Approved Amount:"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/approved_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/transaction_no"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/approved_txt"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Card Transaction:"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/card_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/approved_amount"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/card_transact_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Card Transaction Amt.(Appr.):"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/card_transaction_appr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/card_transaction"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="# 300.00"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cash_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/card_transact_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Cash Transaction:"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cash_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/card_transaction_appr"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ussd_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cash_transaction"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="USSD Transaction:"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ussd_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/cash_transaction"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="# 300.00"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ussd_appr_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ussd_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="USSD Transaction Amt.(Appr.):"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/ussd_transaction_appr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/ussd_transaction"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/breeze_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ussd_appr_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="BreezePay Transaction :"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/breeze_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/ussd_transaction_appr"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="# 300.00 "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/breeze_trans_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breeze_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="BreezePay Trans.Amt(A):"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/breeze_trans_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/breeze_amount"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="# 0.00 "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/breeze_trans_txt"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/inter"
+            android:text="Total Approved Amount"
+            android:textColor="#3E3E3E"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/breeze_trans_amount"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/inter"
+            android:text="# 300.00 "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/total_amount"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#A19D9D" />
+
+        <LinearLayout
+            android:id="@+id/layout_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/divider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_weight="1"
+                android:text="Payment\n Method"
+                android:textColor="@color/black"
+                android:layout_marginStart="7dp"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                android:text="Amount"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="7dp"
+                android:text="Transaction\n type"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:layout_marginStart="7dp"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#A19D9D"
+            android:layout_margin="10dp"
+            android:layout_below="@id/layout_one"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/divider2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_weight="1"
+                android:text="15:54"
+                android:textColor="@color/black"
+                android:layout_marginStart="7dp"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                android:text="CARD"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:layout_marginStart="7dp"
+                android:text="#300.00"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter"
+                android:text="Purchase"
+                android:textColor="@color/black"
+                android:layout_marginStart="7dp"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/approved_button"
+                android:layout_width="95dp"
+                android:layout_height="40dp"
+                android:height="50dp"
+                app:cornerRadius="20dp"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+                android:text="Approved"
+                android:textColor="@color/white"
+                android:backgroundTint="#35C31A"/>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/print_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:textAllCaps="false"
+        android:layout_weight="1"
+        android:text="Approved"
+        android:textColor="@color/white"
+        android:backgroundTint="#35C31A"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

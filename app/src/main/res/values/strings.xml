@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">FATT PAY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- CUSTOMER TRANSACTIONS RECEIPT -->
+    <string name="customer_copy"> Customer Copy </string>
+    <string name="terminal_no"> Terminal No: </string>
+    <string name="tran_date"> Tran Date: </string>
+    <string name="trans_approve"> Transaction Approved</string>
+    <string name="merchant"> Merchant </string>
+    <string name="merchant_id"> Merchant Id </string>
+    <string name="location"> Location </string>
+    <string name="ref_no"> Ref No.</string>
+    <string name="payment_type"> Payment Type </string>
+    <string name="name"> Name </string>
+    <string name="stan"> Stan </string>
+    <string name="authorized_code"> Authorized Code </string>
+    <string name="status"> Status </string>
+    <string name="amount"> Amount </string>
+    <string name="total"> Total : </string>
+    <string name="retain_text">Please retain your receipt. Thank you.</string>
+    <string name="print_customer_copy"> Print Customers Copy </string>
+    <string name="merchant_copy"> Merchant Copy </string>
+    <string name="payment_successful">Payment Successful</string>
+    <string name="processed">Your payment has been processed</string>
+    <string name="details_text">Details of the transactions are below</string>
+
+    <!-- CATEGORIES SCREEN -->
+    <string name="transaction"> Transaction </string>
+    <string name="cardless">Cardless</string>
+    <string name="card">Card</string>
+    <string name="qr_code">QR Code</string>
+    <string name="ussd">USSD</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="proceed">Proceed</string>
+    <string name="narration">Narration</string>
+    <string name="verify_pin">Verify Pin</string>
+    <string name="forgot_pin">Forgot PIN?</string>
+    <string name="submit">Submit</string>
+</resources>
